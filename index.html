@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Registration | CIT Attendance</title>
+    <link rel="stylesheet" href="assets/styles.css">
+    <script src="assets/app.js" defer></script>
+</head>
+<body>
+    <main class="page">
+        <section class="registration-card" aria-labelledby="page-title">
+            <header class="page-header">
+                <p class="eyebrow">CIT Attendance</p>
+                <h1 id="page-title">Member registration</h1>
+                <p class="intro">Enter the member's details to complete registration.</p>
+            </header>
+
+            <p class="form-note">This demo confirms the details on this page but does not save them.</p>
+            <form id="registration-form" method="post">
+                <div class="field">
+                    <label for="name">Name</label>
+                    <input id="name" name="name" type="text" autocomplete="name" maxlength="120" required>
+                </div>
+
+                <div class="field">
+                    <label for="district">District</label>
+                    <input id="district" name="district" type="text" maxlength="120" required>
+                </div>
+
+                <div class="field-row">
+                    <div class="field">
+                        <label for="age">Age</label>
+                        <input id="age" name="age" type="number" min="0" max="120" step="1" inputmode="numeric" required>
+                    </div>
+                    <div class="field">
+                        <label for="birthdate">Birthdate</label>
+                        <input id="birthdate" name="birthdate" type="date" required>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label for="gender">Gender</label>
+                    <select id="gender" name="gender" required>
+                        <option value="">Select gender</option>
+                        <option value="female">Female</option>
+                        <option value="male">Male</option>
+                        <option value="non_binary">Non-binary</option>
+                        <option value="prefer_not_to_say">Prefer not to say</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="status">Status</label>
+                    <select id="status" name="status" required>
+                        <option value="new">New</option>
+                        <option value="regular">Regular</option>
+                        <option value="dormant">Dormant</option>
+                    </select>
+                </div>
+
+                <button class="button" type="submit">Complete registration</button>
+            </form>
+
+            <div id="success-message" class="notice notice-success" role="status" tabindex="-1" hidden>
+                <h2>Registration details received</h2>
+                <p id="success-summary"></p>
+                <button id="register-another" class="button button-secondary" type="button">Register another member</button>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
